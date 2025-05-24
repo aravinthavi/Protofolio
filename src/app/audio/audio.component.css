@@ -1,0 +1,89 @@
+.recorder {
+    text-align: center;
+    margin-top: 50px;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.mat-mdc-card-title {
+    text-align: -webkit-center;
+}
+
+.mat-mdc-card-content:last-child {
+    text-align: center;
+}
+
+.fa-microphone {
+    color: red !important;
+    width: 50px;
+    height: 50px;
+    /* text-shadow: 1px 1px 1px #ccc; */
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.record-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 32px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.record-play-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+.record-play-btn:hover {
+    background-color: darkred;
+}
+.record-btn:hover {
+    background-color: darkred;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+}
