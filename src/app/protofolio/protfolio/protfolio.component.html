@@ -1,7 +1,24 @@
-<ngx-charts-bar-vertical [scheme]="colorScheme" [results]="single" [gradient]="gradient" [xAxis]="showXAxis"
-    [yAxis]="showYAxis" [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
-    [yAxisLabel]="yAxisLabel">
-</ngx-charts-bar-vertical>
-<hr>
-<ngx-charts-pie-chart [scheme]="colorScheme" [results]="single" [legend]="showLegend" [labels]="showLabels"
-    [doughnut]="doughnut" [gradient]="gradient">
+<div class="form-container">
+  <mat-card>
+    <mat-card-title>
+      <div class="image-counter">
+        <p>Photos {{ currentIndex + 1 }} / {{ images.length }}</p>
+      </div>
+    </mat-card-title>
+    <mat-card-content>
+      <div class="carousel-container">
+        <div class="carousel-images" [style.transform]="getTransform()" (swipeleft)="SwipeNext()"
+          (swiperight)="SwipeRight()">
+          <img *ngFor="let image of images" [src]="image" class="carousel-image" />
+        </div>
+
+        <!-- Dot Indicators -->
+        <div class="carousel-dots">
+          <span *ngFor="let image of images; let i = index" [class.active]="i === currentIndex" (click)="swapImage(i)">
+          </span>
+        </div>
+        <!-- Image Count -->
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

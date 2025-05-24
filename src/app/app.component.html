@@ -1,11 +1,9 @@
 <mat-toolbar color="primary" class="toolbar">
-  <a mat-button routerLink="/protofolio" routerLinkActive="active-link">Portfolio View </a>
-
   <!-- Desktop Nav -->
   <span class="spacer"></span>
   <nav class="nav-links">
-    <a mat-button routerLink="/audio" routerLinkActive="active-link">Dashboard</a>
-    <a mat-button routerLink="/investment" routerLinkActive="active-link">Add Investment</a>
+    <a mat-button routerLink="/protofolio" routerLinkActive="active-link">Portfolio View </a>
+    <a mat-button routerLink="/audio" routerLinkActive="active-link">Audio Record</a>
   </nav>
 
   <!-- Mobile Menu Icon -->
@@ -14,8 +12,8 @@
 
 <!-- Mobile Nav (shown conditionally) -->
 <nav class="mobile-menu" *ngIf="mobileMenuOpen">
-  <a mat-button routerLink="/dashboard" routerLinkActive="active-link" (click)="toggleMenu()">Dashboard</a>
-  <a mat-button routerLink="/investment" routerLinkActive="active-link" (click)="toggleMenu()">Add Investment</a>
+  <a mat-button routerLink="/protofolio" routerLinkActive="active-link">Portfolio View </a>
+  <a mat-button routerLink="/audio" routerLinkActive="active-link">Audio Record</a>
 </nav>
 
 <div class="container">

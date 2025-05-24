@@ -4,27 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'protofolio',
     pathMatch: 'full'
-  },
-  {
-    path: 'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-  },
-  {
-    path: 'investment',
-    loadChildren: () => import('./investment-form/investment-form.module').then(m => m.InvestmentFormModule)
   },
   {
     path: 'protofolio',
     loadChildren: () => import('./protofolio/protofolio.module').then(m => m.ProtofolioModule)
   },
-  { path: 'dashboard', loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule) },
-  { path: 'investment', loadChildren: () => import('./investment-form/investment-form.module').then(m => m.InvestmentFormModule) },
   { path: 'audio', loadChildren: () => import('./audio/audio.module').then(m => m.AudioModule) },
   {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'protofolio'
   }
 ];
 

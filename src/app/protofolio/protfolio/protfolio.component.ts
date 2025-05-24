@@ -6,52 +6,31 @@ import { Component } from '@angular/core';
   styleUrls: ['./protfolio.component.css']
 })
 export class ProtfolioComponent {
-  width: number = 1000;
-  height: number = 600;
-  fitContainer: boolean = false;
-
-    view: any[] = [600, 400];
-  // options for the chart
-  showXAxis = true;
-  showYAxis = true;
-  gradient = true;
-  showLegend = true;
-  showXAxisLabel = true;
-  xAxisLabel = 'Stocks';
-  showYAxisLabel = true;
-  yAxisLabel = 'Sales';
-  timeline = true;
-  doughnut = true;
-  colorScheme = {
-    domain: ['#9370DB', '#87CEFA', '#FA8072', '#FF7F50', '#90EE90', '#9370DB']
-  };
-  //pie
-  showLabels = true;
-  // data goes here
-public single = [
-  {
-    "name": "Diversified Bond",
-    "value": 224370
-  },
-  {
-    "name": "Diversified Stock",
-    "value": 112600
-  },
-  {
-    "name": "Local Stocks",
-    "value": 296215
-  },
-  {
-    "name": "Foreign Stocks",
-    "value": 257363
-  },
-  {
-    "name": "Small cap Fund",
-    "value": 196750
-  },
-  {
-    "name": "Large Cap Fund",
-    "value": 204617
+  images = [
+    'assets/henry.webp',
+    'assets/004.webp',
+    'assets/Profile_Photo.jpg',
+    'assets/matt.webp'
+    // add more images here
+  ];
+  currentIndex = 0;
+  SwipeNext() {
+    if (this.currentIndex < this.images.length - 1) {
+      this.currentIndex++;
+    }
   }
-];
+
+  SwipeRight() {
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
+    }
+  }
+
+  swapImage(index: number) {
+    this.currentIndex = index;
+  }
+
+  getTransform(): string {
+    return `translateX(-${this.currentIndex * 100}%)`;
+  }
 }

@@ -9,10 +9,8 @@
                     <div *ngIf="isRecording || audioRecorded">
                         <canvas #waveCanvas width="500" height="100"></canvas>
                         <p>{{ formatTime(elapsedTime) }}/0:30</p>
-                        <!-- <button (click)="stopRecording()">Stop Recording</button> -->
                       </div>
                     <div *ngIf="!audioRecorded">
-                        <!-- <img src="assets/audio1.png" alt="Audio Prompt"> -->
                         <button  class="record-btn" (click)="startRecording()" [disabled]="isRecording"></button>
                         <p>Tap to start recording</p>
                       </div>
@@ -22,32 +20,8 @@
                         <p>Tap to play</p>
                         <button (click)="cancelAudio()">Cancel</button>
                       </div>
-                    <!-- <button (click)="startRecording()" *ngIf="!isRecording">Tap to start recording</button> -->
-                    <!-- <i class="fa fa-microphone" aria-hidden="true"></i> -->
-                    <!-- <div *ngIf="isRecording">
-                        <canvas #waveformCanvas width="500" height="100"></canvas>
-                        <p>{{ formatTime(elapsedTime) }}/0:30</p>
-                    </div> -->
                 </div>
-                <!-- <button class="record-btn" *ngIf="!isRecording" (click)="startRecording()">
-                </button>
-                <p *ngIf="!isRecording">Tap to start recording</p> -->
-                
             </div>
         </mat-card-content>
     </mat-card>
 </div>
-<!-- <div *ngIf="!audioRecorded">
-    <img src="assets/audio1.png" alt="Audio Prompt">
-    <button (click)="startRecording()" [disabled]="isRecording">Start Recording</button>
-  </div>
-  
-  <div *ngIf="isRecording">
-    <p>Recording...</p>
-    <button (click)="stopRecording()">Stop Recording</button>
-  </div>
-  
-  <div *ngIf="audioRecorded && !isRecording">
-    <button (click)="playAudio()">Tap to play</button>
-    <button (click)="cancelAudio()">Cancel</button>
-  </div> -->
